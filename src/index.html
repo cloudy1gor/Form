@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ihor Saveliev</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+<h1 class="title">
+    Reach Out and <span>Connect</span> With Us
+</h1>
+
+<form class="form">
+    <input type="text" id="name" placeholder="Name*" name="firstname" required>
+    <input type="text" id="email" placeholder="Email*" name="email" required>
+    <input type="tel" id="phone" placeholder="Phone*" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    <input type="password" id="password" placeholder="Password*" name="password" required>
+    <select id="country" placeholder="Chose your city*" name="country" required>
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+    </select>
+
+    <div class="form__footer">
+        <input type="checkbox" id="checkbox" checked="checked" name="checkbox">
+        <span>I have read and accepted <a href="#">privacy policy</a>.</span>
+        <button type="submit" class="signupbtn">Submit</button>
+    </div>
+</form>
+
+</body>
+<script src="./js/main.js"></script>
+</html>

@@ -1,0 +1,13 @@
+@use '../../node_modules/normalize-css/normalize.css' as *;
+@use './reset';
+@use './fonts';
+
+body {
+  background: #F7F9FD;
+  font-family: "Overpass-700", sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
