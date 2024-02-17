@@ -2,12 +2,189 @@
 @use './reset';
 @use './fonts';
 
-body {
-  background: #F7F9FD;
-  font-family: "Overpass-700", sans-serif;
+body, .connect__form input, .connect__form select  {
+  background-color: #F7F9FD;
+  font-family: "Hind";
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
+.connect {
+  margin: 80px;
+  color: #2A3B53;
+
+  &__header {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin: 0 0 5px 0;
+    font-family: "Overpass-700", sans-serif;
+    font-size: 96px;
+    line-height: 106px;
+    color: #8B96AC;
+
+    span {
+      color: #2A3B53;
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &__subtitle, &__form-footer, &__form-footer a {
+    color: #8B96AC;
+  }
+
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 560px;
+
+    input, select {
+      border: 0;
+      border-bottom: 2px solid #5B6C8C;
+      margin-bottom: 20px;
+      padding: 7px 20px;
+      font-size: 24px;
+      line-height: 36px;
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid #5879EF;
+      }
+
+      //&:invalid {
+      //  border-bottom: 2px solid #BA5B5B;
+      //}
+
+      &:focus:invalid {
+        border-bottom: 2px solid #5879EF;
+      }
+    }
+
+    select {
+      margin-bottom: 30px;
+      padding: 7px 16px;
+
+      & option:disabled {
+        color: #8B96AC;
+      }
+    }
+
+  }
+
+  &__password-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  #password {
+    width: 100%;
+  }
+
+  #icon {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    cursor: pointer;
+  }
+
+  &__form-footer {
+    display: flex;
+    align-items: center;
+
+    input {
+      margin: 0 10px 0 0;
+    }
+
+    span {
+      flex: 1 1 auto;
+    }
+
+    button {
+      border: 0;
+      border-bottom: 2px solid #5879EF;
+      margin-left: auto;
+      font-family: "Overpass-700", sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 42px;
+      background-color: #F7F9FD;
+      cursor: pointer;
+      transition: all ease 0.3s;
+
+      &:hover {
+        background-color: #5879EF;
+      }
+    }
+
+    // Checkbox
+    label {
+      position: relative;
+      margin-right: 8px;
+      width: 14px;
+      height: 14px;
+      display: block;
+      cursor: pointer;
+    }
+
+    input {
+      position: absolute;
+      boeder-radius: 50%;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    label span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      border: 1px solid #000;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+
+    /* On mouse-over, add a grey background color */
+    label:hover input ~ span {
+      background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    label input:checked ~ span {
+      background-color: #F7F9FD;
+    }
+
+    /* Show the checkmark when checked */
+    label input:checked ~ span:after {
+      display: block;
+    }
+
+    label span:after {
+      left: 6px;
+      bottom: 4px;
+      width: 4px;
+      height: 14px;
+      border: solid #000;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+
 }
+

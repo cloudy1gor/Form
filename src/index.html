@@ -9,28 +9,41 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
-<h1 class="title">
-    Reach Out and <span>Connect</span> With Us
-</h1>
+    <section class="connect">
+        <div class="connect__header">
+            <h1 class="connect__title">
+                Reach Out and</br> <span>Connect</span> With Us
+            </h1>
+            <span class="connect__subtitle">Bridging Your Ideas with Our Expertise</span>
+        </div>
 
-<form class="form">
-    <input type="text" id="name" placeholder="Name*" name="firstname" required>
-    <input type="text" id="email" placeholder="Email*" name="email" required>
-    <input type="tel" id="phone" placeholder="Phone*" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-    <input type="password" id="password" placeholder="Password*" name="password" required>
-    <select id="country" placeholder="Chose your city*" name="country" required>
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
-    </select>
+        <form class="connect__form">
+            <input type="text" id="name" placeholder="Name*" name="firstname" required>
+            <input type="text" id="email" placeholder="Email*" name="email" required>
+            <input type="tel" id="phone" placeholder="Phone*" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
 
-    <div class="form__footer">
-        <input type="checkbox" id="checkbox" checked="checked" name="checkbox">
-        <span>I have read and accepted <a href="#">privacy policy</a>.</span>
-        <button type="submit" class="signupbtn">Submit</button>
-    </div>
-</form>
+            <div class="connect__password-box">
+                <input type="password" id="password" placeholder="Password*" name="password" required>
+                <img id="icon" src="images/eye-open.png" alt="eye">
+            </div>
 
+            <select id="country" required>
+                <option value="" disable selected hidden>Choise your city*</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <div class="connect__form-footer">
+                <label>
+                    <input type="checkbox" id="checkbox">
+                    <span></span>
+                </label>
+                <span>I have read and accepted <a href="#">privacy policy</a>.</span>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
 </body>
-<script src="./js/main.js"></script>
+<script src="./js/main.min.js"></script>
 </html>

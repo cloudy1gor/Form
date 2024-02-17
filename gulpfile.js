@@ -143,7 +143,12 @@ function styles() {
         .pipe(browserSync.reload({ stream: true }));
 }
 
-function fonts {
+function images() {
+    return src("src/images/*.*")
+        .pipe(dest("dist/images/"));
+}
+
+function fonts() {
     return src("src/fonts/*.*")
         .pipe(dest("dist/fonts/"));
 }
@@ -152,6 +157,7 @@ function startwatch() {
     watch("src/*.html", html);
     watch("src/scss/**/*.scss", styles);
     watch("src/js/**/*.js", scripts);
+    watch("src/images/**/*.*", images);
     watch("src/fonts/**/*.*", fonts);
 }
 
@@ -159,6 +165,7 @@ exports.browsersync = browsersync;
 exports.html = html;
 exports.scripts = scripts;
 exports.styles = styles;
+exports.images = images;
 exports.fonts = fonts;
 
-exports.default = series(parallel(html, scripts, styles, fonts, browsersync, startwatch));
+exports.default = series(parallel(html, scripts, styles, images, fonts, browsersync, startwatch));
