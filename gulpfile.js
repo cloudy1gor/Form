@@ -38,7 +38,7 @@ function html() {
                 basepath: "src/",
             })
         )
-        // .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+        .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
         .pipe(
             size({
                 gzip: true,
@@ -49,6 +49,11 @@ function html() {
         )
         .pipe(dest("dist/"))
         .pipe(browserSync.reload({ stream: true }));
+}
+
+function php() {
+    return src("src/php/**/*.php")
+        .pipe(dest("dist/"))
 }
 
 function scripts() {
@@ -155,6 +160,7 @@ function fonts() {
 
 function startwatch() {
     watch("src/*.html", html);
+    watch("src/php/**/*.php", php);
     watch("src/scss/**/*.scss", styles);
     watch("src/js/**/*.js", scripts);
     watch("src/images/**/*.*", images);
@@ -163,9 +169,10 @@ function startwatch() {
 
 exports.browsersync = browsersync;
 exports.html = html;
+exports.php = php;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
 exports.fonts = fonts;
 
-exports.default = series(parallel(html, scripts, styles, images, fonts, browsersync, startwatch));
+exports.default = series(parallel(html, php, scripts, styles, images, fonts, startwatch));
