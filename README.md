@@ -2,7 +2,7 @@
 When you enter data into the form, it is sent to the email that was specified in the form.
 
 ## Dependencies
-You need to use Nodejs v14.17.3 for Gulp to work properly.
+You need to use **Nodejs v14.17.3** for Gulp to work properly.
 - You can use the [NVM](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) utility to install and manage NodeJS versions.
 - [Gulp](https://gulpjs.com/) and [WebPack](https://webpack.js.org/) will also be needed
 - You need [Docker](https://docs.docker.com/desktop/install/windows-install/) for the server to work properly
@@ -23,7 +23,7 @@ docker-compose up -d
 gulp
 ```
 The project will now be available in the browser at:
-http://localhost:80
+http://localhost
 
 ![ScreenShot](/screenshot.png)
 
