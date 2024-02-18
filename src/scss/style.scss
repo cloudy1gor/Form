@@ -11,6 +11,10 @@ body, .connect__form input, .connect__form select  {
   margin: 80px;
   color: #2A3B53;
 
+  @media (max-width: 600px) {
+    margin: 10px;
+  }
+
   &__header {
     margin-bottom: 50px;
   }
@@ -21,6 +25,11 @@ body, .connect__form input, .connect__form select  {
     font-size: 96px;
     line-height: 106px;
     color: #8B96AC;
+
+    @media (max-width: 600px) {
+      font-size: 38px;
+      line-height: 42px;
+    }
 
     span {
       color: #2A3B53;
@@ -42,13 +51,28 @@ body, .connect__form input, .connect__form select  {
     flex-direction: column;
     max-width: 560px;
 
+    &-box {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      & span {
+        margin-top: 10px;
+        color: #BA5B5B;
+      }
+    }
+
     input, select {
       border: 0;
       border-bottom: 2px solid #5B6C8C;
-      margin-bottom: 20px;
       padding: 7px 20px;
       font-size: 24px;
       line-height: 36px;
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
 
       &:focus {
         outline: none;
@@ -80,6 +104,7 @@ body, .connect__form input, .connect__form select  {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 20px;
   }
 
   #password {
@@ -96,6 +121,10 @@ body, .connect__form input, .connect__form select  {
   &__form-footer {
     display: flex;
     align-items: center;
+
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
 
     input {
       margin: 0 10px 0 0;
