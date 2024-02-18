@@ -12,13 +12,13 @@ export default function nameValidate() {
     }
 
     function onNameInput() {
-        const nameValue = nameInput.value.trim();
+        let nameValue = nameInput.value;
         if (!isNameValid(nameValue)) {
             nameInput.style.borderColor = '#BA5B5B';
             nameStatus.innerText = "Invalid name format";
         } else {
-            input.style.borderColor = '#5B6C8C';
-            status.innerText = "";
+            nameInput.style.borderColor = '#5B6C8C';
+            nameStatus.innerText = "";
         }
     }
 

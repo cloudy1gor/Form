@@ -12,14 +12,14 @@ export default function phoneValidate() {
     }
 
     function onPhoneInput() {
-        const phoneValue = phoneInput.value.trim();
+        const phoneValue = phoneInput.value;
 
         if (!isPhoneValid(phoneValue)) {
             phoneInput.style.borderColor = '#BA5B5B';
             phoneStatus.innerText = "Invalid phone format";
         } else {
-            input.style.borderColor = '#5B6C8C';
-            status.innerText = "";
+            phoneInput.style.borderColor = '#5B6C8C';
+            phoneStatus.innerText = "";
         }
     }
 
