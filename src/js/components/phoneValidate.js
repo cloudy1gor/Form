@@ -17,6 +17,9 @@ export default function phoneValidate() {
         if (!isPhoneValid(phoneValue)) {
             phoneInput.style.borderColor = '#BA5B5B';
             phoneStatus.innerText = "Invalid phone format";
+        } else {
+            input.style.borderColor = '#5B6C8C';
+            status.innerText = "";
         }
     }
 

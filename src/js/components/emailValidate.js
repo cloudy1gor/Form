@@ -15,6 +15,9 @@ export default function emailValidate() {
         if (!isEmailValid(input.value)) {
             input.style.borderColor = '#BA5B5B';
             status.innerText = "Invalid email format";
+        } else {
+            input.style.borderColor = '#5B6C8C';
+            status.innerText = "";
         }
     }
 

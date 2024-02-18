@@ -1,5 +1,5 @@
 # Simple Form
-When you enter data into the form, it is sent to the email server.
+When you enter data into the form, it is sent to the email server and to the email from the form.
 
 ## File structure
 - **/dist** - folder with the collected files, which are duplicated to the server at the path /var/html/www
